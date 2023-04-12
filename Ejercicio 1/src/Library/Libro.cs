@@ -8,8 +8,7 @@ namespace SRP
         public string Title { get ; }
         public string Author { get ; }
         public string Code { get ;  }
-        public string LibrarySector { get ; set; }
-        public string LibraryShelve { get ; set; }
+        
 
         public Book(String title, String author, String code)
         {
@@ -18,11 +17,10 @@ namespace SRP
             this.Code = code;
         }
 
-        public void ShelveBook(String sector, String shelve)
-        {
-            this.LibrarySector = sector;
-            this.LibraryShelve = shelve;
-        }
+        
 
     }
 }
+// Este codigo no cumple con el principio SRP y podria ser escrito de una forma mas eficiente. Esto se debe 
+//a que la clase libro contiene informacion que puede ser irrelevante para el objeto, y que podria ser asignada
+// a otra clase distinta.
